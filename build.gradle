@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'war'
+apply plugin: 'maven'
+
+repositories {
+	mavenLocal ()
+	mavenCentral()
+	maven {
+        url 'http://repo.spring.io/snapshot'
+        url 'http://dev.fusemachines.com/mvn'
+        url 'http://dl.bintray.com/content/fullcontact/fullcontact-oss'
+    }
+}
+
+dependencies {
+
+	compile group: 'commons-logging', name: 'commons-logging', version: '1.1.1'
+	compile 'commons-lang:commons-lang:2.6'
+	compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.0.1'
+	
+}
